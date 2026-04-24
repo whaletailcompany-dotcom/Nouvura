@@ -1,0 +1,199 @@
+<!DOCTYPE html><html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NOUVURA System</title><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@300;400&display=swap" rel="stylesheet"><style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:'Poppins',sans-serif;
+  background:#050816;
+  color:#fff;
+  overflow-x:hidden;
+}
+
+/* GRID BACKGROUND */
+body::before{
+  content:"";
+  position:fixed;
+  width:100%;height:100%;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size:40px 40px;
+  z-index:-1;
+}
+
+h1,h2,h3{font-family:'Montserrat',sans-serif}
+
+.section{
+  padding:80px 20px;
+}
+
+.layer{
+  border:1px solid rgba(0,200,255,0.2);
+  border-radius:15px;
+  padding:40px;
+  margin:40px auto;
+  max-width:1200px;
+  box-shadow:0 0 20px rgba(0,200,255,0.1);
+  transition:0.3s;
+}
+
+.layer:hover{
+  box-shadow:0 0 40px rgba(0,200,255,0.3);
+}
+
+.title{
+  text-align:center;
+  margin-bottom:40px;
+  font-size:28px;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:20px;
+}
+
+.card{
+  border:1px solid rgba(0,200,255,0.2);
+  padding:20px;
+  border-radius:10px;
+  text-align:center;
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 0 20px rgba(0,200,255,0.4);
+}
+
+.hero{
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
+
+.hero h1{
+  font-size:60px;
+  color:#00ccff;
+  text-shadow:0 0 20px #00ccff;
+  animation:float 3s infinite ease-in-out;
+}
+
+@keyframes float{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-10px)}
+}
+
+.hero p{
+  margin-top:20px;
+  font-size:18px;
+  opacity:0.7;
+}
+
+.btn{
+  margin-top:30px;
+  padding:10px 20px;
+  border:1px solid #00ccff;
+  color:#00ccff;
+  background:transparent;
+  cursor:pointer;
+}
+
+.footer{
+  text-align:center;
+  padding:20px;
+  border-top:1px solid rgba(255,255,255,0.1);
+}
+
+input,textarea{
+  width:100%;
+  padding:10px;
+  margin:10px 0;
+  background:#0b1120;
+  border:1px solid #00ccff;
+  color:#fff;
+}
+
+</style></head><body><!-- HERO --><section class="hero">
+  <h1>NOUVURA</h1>
+  <p>It all started with an idea</p>
+  <button class="btn" onclick="scrollToSection('portfolio')">View Projects</button>
+</section><!-- ABOUT --><section class="section">
+<div class="layer">
+<h2 class="title">About</h2>
+<p style="text-align:center">We are a creative company combining design, technology, CNC and laser innovation to build powerful visual systems.</p>
+</div>
+</section><!-- SERVICES --><section class="section">
+<div class="layer">
+<h2 class="title">Services</h2>
+<div class="grid">
+<div class="card">UI/UX</div>
+<div class="card">Web Development</div>
+<div class="card">Branding</div>
+<div class="card">Graphic Design</div>
+<div class="card">DTF Printing</div>
+<div class="card">CNC</div>
+<div class="card">Laser</div>
+</div>
+</div>
+</section><!-- PRICING --><section class="section">
+<div class="layer">
+<h2 class="title">Pricing</h2>
+<div class="grid">
+<div class="card">Logo: 2500 - 40000 DZD</div>
+<div class="card">Flyer: 2000 - 12000 DZD</div>
+<div class="card">Video: 2000 - 120000 DZD</div>
+<div class="card">UI: 10000 - 60000 DZD</div>
+</div>
+</div>
+</section><!-- PORTFOLIO --><section class="section" id="portfolio">
+<div class="layer">
+<h2 class="title">Portfolio</h2>
+<div class="grid">
+<img src="images/PUT-IMAGE1.jpg" class="card">
+<img src="images/PUT-IMAGE2.jpg" class="card">
+<img src="images/PUT-IMAGE3.jpg" class="card">
+</div>
+</div>
+</section><!-- YOUTUBE --><section class="section">
+<div class="layer">
+<h2 class="title">YouTube</h2>
+<iframe width="100%" height="300" src="https://www.youtube.com/embed/ncwKWiBgKvQ" frameborder="0" allowfullscreen></iframe>
+</div>
+</section><!-- CONTACT --><section class="section">
+<div class="layer">
+<h2 class="title">Contact</h2>
+<p>WhatsApp: 0776532042</p>
+<p>Email: yacineiguenene@gmail.com</p>
+<p>Facebook: nouvura adv</p>
+</div>
+</section><!-- REQUEST --><section class="section">
+<div class="layer">
+<h2 class="title">Request Service</h2>
+<input placeholder="Your Name">
+<textarea placeholder="Your Request"></textarea>
+<button class="btn" onclick="sendWhatsApp()">Send via WhatsApp</button>
+</div>
+</section><!-- FOOTER --><div class="footer">
+<p>© 2026 Nouvura</p>
+<button onclick="showPolicy()">Intellectual Property</button>
+</div><script>
+function scrollToSection(id){
+ document.getElementById(id).scrollIntoView({behavior:'smooth'});
+}
+
+function sendWhatsApp(){
+ let msg = document.querySelector('textarea').value;
+ window.open(`https://wa.me/213776532042?text=${encodeURIComponent(msg)}`);
+}
+
+function showPolicy(){
+ alert('All rights reserved - Nouvura');
+}
+</script></body>
+</html>
