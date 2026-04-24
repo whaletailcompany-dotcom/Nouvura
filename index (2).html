@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NOUVURA – Creative Design, Printing & Technology</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800;900&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ========== NAVBAR ========== -->
+<nav class="navbar" id="navbar">
+  <a href="#hero" class="nav-logo">NOUVURA</a>
+  <div class="nav-links">
+    <a href="#about" data-i18n="nav_about">À propos</a>
+    <a href="#services" data-i18n="nav_services">Services</a>
+    <a href="#pricing" data-i18n="nav_pricing">Tarifs</a>
+    <a href="#portfolio" data-i18n="nav_portfolio">Portfolio</a>
+    <a href="#media" data-i18n="nav_media">Médias</a>
+    <a href="#contact" data-i18n="nav_contact">Contact</a>
+    <a href="#request" class="btn-gold" data-i18n="nav_request">Demande</a>
+  </div>
+  <div class="lang-switcher">
+    <button onclick="setLang('fr')" class="lang-btn" id="lang-fr">FR</button>
+    <button onclick="setLang('en')" class="lang-btn" id="lang-en">EN</button>
+    <button onclick="setLang('ar')" class="lang-btn" id="lang-ar">AR</button>
+  </div>
+  <button class="nav-hamburger" id="hamburger" onclick="toggleMenu()">☰</button>
+</nav>
+
+<!-- Mobile Nav -->
+<div class="mobile-nav" id="mobileNav">
+  <a href="#about" onclick="toggleMenu()" data-i18n="nav_about">À propos</a>
+  <a href="#services" onclick="toggleMenu()" data-i18n="nav_services">Services</a>
+  <a href="#pricing" onclick="toggleMenu()" data-i18n="nav_pricing">Tarifs</a>
+  <a href="#portfolio" onclick="toggleMenu()" data-i18n="nav_portfolio">Portfolio</a>
+  <a href="#media" onclick="toggleMenu()" data-i18n="nav_media">Médias</a>
+  <a href="#contact" onclick="toggleMenu()" data-i18n="nav_contact">Contact</a>
+  <a href="#request" onclick="toggleMenu()" data-i18n="nav_request">Demande</a>
+  <div class="mobile-lang">
+    <button onclick="setLang('fr');toggleMenu()" class="lang-btn">FR</button>
+    <button onclick="setLang('en');toggleMenu()" class="lang-btn">EN</button>
+    <button onclick="setLang('ar');toggleMenu()" class="lang-btn">AR</button>
+  </div>
+</div>
+
+<!-- ========== HERO ========== -->
+<section class="hero" id="hero">
+  <canvas id="laserCanvas"></canvas>
+  <div class="hero-content">
+    <div class="hero-logo-wrap">
+      <h1 class="hero-logo" id="heroLogo">NOUVURA</h1>
+      <div class="hero-logo-glow"></div>
+    </div>
+    <p class="hero-tagline" data-i18n="hero_tagline">"It all started with an idea."</p>
+    <a href="#portfolio" class="btn-hero" data-i18n="hero_cta">Voir les Projets</a>
+  </div>
+  <div class="hero-scroll-indicator">
+    <span></span>
+  </div>
+</section>
+
+<!-- ========== ABOUT ========== -->
+<section class="about section-pad" id="about">
+  <div class="container">
+    <div class="section-tag" data-i18n="about_tag">Notre Histoire</div>
+    <h2 class="section-title reveal" data-i18n="about_title">Art &amp; Technologie,<br>réunis dans chaque création.</h2>
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <p data-i18n="about_p1">NOUVURA est une agence créative de premier plan, alliant l'excellence artistique à la puissance technologique. Nous concevons des identités visuelles inoubliables, imprimons avec précision et façonnons des expériences numériques uniques.</p>
+        <p data-i18n="about_p2">De la gravure laser CNC aux interfaces numériques, chaque projet reflète notre engagement envers la perfection et l'innovation. Nous ne faisons pas que du design — nous créons des marques qui marquent les esprits.</p>
+        <div class="about-stats">
+          <div class="stat"><span class="stat-num">500+</span><span data-i18n="stat_projects">Projets</span></div>
+          <div class="stat"><span class="stat-num">5+</span><span data-i18n="stat_years">Années</span></div>
+          <div class="stat"><span class="stat-num">200+</span><span data-i18n="stat_clients">Clients</span></div>
+        </div>
+      </div>
+      <div class="about-visual reveal">
+        <div class="about-card-grid">
+          <div class="mini-card gold">UI/UX</div>
+          <div class="mini-card red">Branding</div>
+          <div class="mini-card">CNC</div>
+          <div class="mini-card gold">Print</div>
+          <div class="mini-card">Laser</div>
+          <div class="mini-card red">Web</div>
+        </div>
+        <div class="about-glow-orb"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== SERVICES ========== -->
+<section class="services section-pad" id="services">
+  <div class="container">
+    <div class="section-tag" data-i18n="services_tag">Ce que nous faisons</div>
+    <h2 class="section-title reveal" data-i18n="services_title">Nos Services</h2>
+    <div class="services-grid">
+      <div class="service-card reveal" data-delay="0">
+        <div class="service-icon">✦</div>
+        <h3 data-i18n="srv_uiux">UI/UX Design</h3>
+        <p data-i18n="srv_uiux_desc">Interfaces digitales modernes, intuitives et visuellement impactantes.</p>
+      </div>
+      <div class="service-card reveal" data-delay="1">
+        <div class="service-icon">⬡</div>
+        <h3 data-i18n="srv_web">Développement Web</h3>
+        <p data-i18n="srv_web_desc">Sites web sur mesure, rapides et parfaitement optimisés.</p>
+      </div>
+      <div class="service-card reveal" data-delay="2">
+        <div class="service-icon">◈</div>
+        <h3 data-i18n="srv_brand">Branding</h3>
+        <p data-i18n="srv_brand_desc">Identités de marque complètes qui transmettent votre vision.</p>
+      </div>
+      <div class="service-card reveal" data-delay="3">
+        <div class="service-icon">❋</div>
+        <h3 data-i18n="srv_graphic">Design Graphique</h3>
+        <p data-i18n="srv_graphic_desc">Créations visuelles percutantes pour tous vos supports.</p>
+      </div>
+      <div class="service-card reveal" data-delay="4">
+        <div class="service-icon">▣</div>
+        <h3 data-i18n="srv_dtf">Impression DTF</h3>
+        <p data-i18n="srv_dtf_desc">Impression haute résolution sur textile avec des couleurs éclatantes.</p>
+      </div>
+      <div class="service-card reveal" data-delay="5">
+        <div class="service-icon">⊕</div>
+        <h3 data-i18n="srv_cnc">Gravure CNC</h3>
+        <p data-i18n="srv_cnc_desc">Découpe et gravure de précision sur bois, acrylique, métal.</p>
+      </div>
+      <div class="service-card reveal" data-delay="6">
+        <div class="service-icon">⊛</div>
+        <h3 data-i18n="srv_laser">Gravure Laser</h3>
+        <p data-i18n="srv_laser_desc">Gravure laser ultra-précise pour vos créations les plus détaillées.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== PRICING ========== -->
+<section class="pricing section-pad" id="pricing">
+  <div class="container">
+    <div class="section-tag" data-i18n="pricing_tag">Investissement</div>
+    <h2 class="section-title reveal" data-i18n="pricing_title">Tarifs &amp; Formules</h2>
+
+    <!-- Tier Explanation -->
+    <div class="tier-legend reveal">
+      <div class="tier-item">
+        <span class="tier-icon">🤖</span>
+        <strong>AI</strong>
+        <span data-i18n="tier_ai">Rapide &amp; Abordable, assisté par IA</span>
+      </div>
+      <div class="tier-item featured-tier">
+        <span class="tier-icon">⚡</span>
+        <strong>Hybrid</strong>
+        <span data-i18n="tier_hybrid">Équilibré – Le plus recommandé</span>
+        <span class="recommended-badge" data-i18n="tier_recommended">Recommandé</span>
+      </div>
+      <div class="tier-item">
+        <span class="tier-icon">🎨</span>
+        <strong>Pro</strong>
+        <span data-i18n="tier_pro">100% Sur-mesure &amp; Premium</span>
+      </div>
+    </div>
+
+    <!-- Pricing Categories -->
+    <div class="pricing-categories">
+
+      <!-- Print Design -->
+      <div class="pricing-category reveal">
+        <h3 class="cat-title" data-i18n="cat_print">🖨️ Design Print</h3>
+        <div class="pricing-cards">
+          <div class="price-card">
+            <div class="price-card-header">
+              <h4 data-i18n="p_bizcard">Carte de Visite</h4>
+            </div>
+            <div class="price-tiers">
+              <div class="pt ai"><span>🤖 AI</span><strong>1 500 – 2 500 DZD</strong></div>
+              <div class="pt hybrid"><span>⚡ Hybrid</span><strong>3 000 – 4 500 DZD</strong></div>
+              <div class="pt pro"><span>🎨 Pro</span><strong>5 000 – 8 000 DZD</strong></div>
+            </div>
+            <button class="btn-request" onclick="requestService('Carte de Visite')" data-i18n="btn_request">👉 Demander ce service</button>
+          </div>
+          <div class="price-card">
+            <div class="price-card-header">
+              <h4 data-i18n="p_flyer">Flyer / Poster</h4>
+            </div>
+            <div class="price-tiers">
+              <div class="pt ai"><span>🤖 AI</span><strong>2 000 – 3 500 DZD</strong></div>
+              <div class="pt hybrid"><span>⚡ Hybrid</span><strong>5 000 – 7 000 DZD</strong></div>
+              <div class="pt pro"><span>🎨 Pro</span><strong>8 000 – 12 000 DZD</strong></div>
+            </div>
+            <button class="btn-request" onclick="requestService('Flyer / Poster')" data-i18n="btn_request">👉 Demander ce service</button>
+          </div>
+          <div class="price-card">
+            <div class="price-card-header">
+              <h4 data-i18n="p_banner">Design Bannière</h4>
+            </div>
+            <div class="price-tiers">
+              <div class="pt ai"><span>🤖 AI</span><strong>3 000 – 5 000 DZD</strong></div>
+              <div class="pt hybrid"><span>⚡ Hybrid</span><strong>7 000 – 10 000 DZD</strong></div>
+              <div class="pt pro"><span>🎨 Pro</span><strong>12 000 – 20 000 DZD</strong></div>
+            </div>
+            <button class="btn-request" onclick="requestService('Design Bannière')" data-i18n="btn_request">👉 Demander ce service</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Branding -->
+      <div class="pricing-category reveal">
+        <h3 class="cat-title" data-i18n="cat_brand">🟣 Branding</h3>
+        <div class="pricing-cards">
+          <div class="price-card">
+            <div class="price-card-header">
+              <h4 data-i18n="p_logo">Logo Design</h4>
+            </div>
+            <div class="price-tiers">
+              <div class="pt ai"><span>🤖 AI</span><strong>2 500 – 4 000 DZD</strong></div>
+              <div class="pt hybrid"><span>⚡ Hybrid</span><strong>8 000 – 12 000 DZD</strong></div>
+              <div class="pt pro"><span>🎨 Pro</span><strong>15 000 – 40 000 DZD</strong></div>
+            </div>
+            <button class="btn-request" onclick="requestService('Logo Design')" data-i18n="btn_request">👉 Demander ce service</button>
+          </div>
+          <div class="price-card featured-price-card">
+            <div class="price-card-header">
+              <h4 data-i18n="p_identity">Identité de Marque</h4>
+            </div>
+            <div class="price-tiers">
+              <div class="pt ai"><span>🤖 AI</span><strong>10 000 – 15 000 DZD</strong></div>
+              <div class="pt hybrid"><span>⚡ Hybrid</span><strong>25 000 – 40 000 DZD</strong></div>
+              <div class="pt pro"><span>🎨 Pro</span><strong>50 000 – 120 000 DZD</strong></div>
+            </div>
+            <button class="btn-request" onclick="requestService('Identité de Marque')" data-i18n="btn_request">👉 Demander ce service</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Social Media -->
+      <div class="pricing-category reveal">
+        <h3 class="cat-title" data-i18n="cat_social">📱 Réseaux Sociaux</h3>
+        <div class="pricing-cards">
+          <div class="price-card">
+            <div class="price-card-header">
+              <h4 data-i18n="p_post">Design Post</h4>
+            </div>
+            <div class="price-tiers">
+              <div class="pt ai"><span>🤖 AI</span><strong>800 – 1 200 DZD</strong></div>
+              <div class="pt hybrid"><span>⚡ Hybrid</span><strong>1 500 – 2 500 DZD</strong></div>
+              <div class="pt pro"><span>🎨 Pro</span><strong>3 000 – 5 000 DZD</strong></div>
+            </div>
+            <button class="btn-request" onclick="requestService('Design Post Social Media')" data-i18n="btn_request">👉 Demander ce service</button>
+          </div>
+          <div class="price-card">
+            <div class="price-card-header">
+              <h4 data-i18n="p_cover">Design Couverture</h4>
+            </div>
+            <div class="price-tiers">
+              <div class="pt ai"><span>🤖 AI</span><strong>1 500 – 2 500 DZD</strong></div>
+              <div class="pt hybrid"><span>⚡ Hybrid</span><strong>3 000 – 5 000 DZD</strong></div>
+              <div class="pt pro"><span>🎨 Pro</span><strong>6 000 – 10 000 DZD</strong></div>
+            </div>
+            <button class="btn-request" onclick="requestService('Design Couverture')" data-i18n="btn_request">👉 Demander ce service</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Video Editing -->
+      <div class="pricing-category reveal">
+        <h3 class="cat-title" data-i18n="cat_video">🎬 Montage Vidéo</h3>
+        <div class="pricing-cards">
+          <div class="price-card">
+            <div class="price-card-header">
+              <h4 data-i18n="p_shortvid">Courte Vidéo</h4>
+            </div>
+            <div class="price-tiers">
+              <div class="pt ai"><span>🤖 AI</span><strong>2 000 – 4 000 DZD</strong></div>
+              <div class="pt hybrid"><span>⚡ Hybrid</span><strong>5 000 – 8 000 DZD</strong></div>
+              <div class="pt pro"><span>🎨 Pro</span><strong>10 000 – 20 000 DZD</strong></div>
+            </div>
+            <button class="btn-request" onclick="requestService('Courte Vidéo')" data-i18n="btn_request">👉 Demander ce service</button>
+          </div>
+          <div class="price-card">
+            <div class="price-card-header">
+              <h4 data-i18n="p_advid">Vidéo Pub Professionnelle</h4>
+            </div>
+            <div class="price-tiers">
+              <div class="pt ai"><span>🤖 AI</span><strong>8 000 – 15 000 DZD</strong></div>
+              <div class="pt hybrid"><span>⚡ Hybrid</span><strong>20 000 – 40 000 DZD</strong></div>
+              <div class="pt pro"><span>🎨 Pro</span><strong>50 000 – 120 000 DZD</strong></div>
+            </div>
+            <button class="btn-request" onclick="requestService('Vidéo Pub Professionnelle')" data-i18n="btn_request">👉 Demander ce service</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- UI Design -->
+      <div class="pricing-category reveal">
+        <h3 class="cat-title" data-i18n="cat_ui">🌐 Design UI</h3>
+        <div class="pricing-cards">
+          <div class="price-card">
+            <div class="price-card-header">
+              <h4 data-i18n="p_landing">Landing Page UI</h4>
+            </div>
+            <div class="price-tiers">
+              <div class="pt ai"><span>🤖 AI</span><strong>10 000 DZD</strong></div>
+              <div class="pt hybrid"><span>⚡ Hybrid</span><strong>20 000 – 30 000 DZD</strong></div>
+              <div class="pt pro"><span>🎨 Pro</span><strong>40 000 – 60 000 DZD</strong></div>
+            </div>
+            <button class="btn-request" onclick="requestService('Landing Page UI')" data-i18n="btn_request">👉 Demander ce service</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ========== PORTFOLIO ========== -->
+<section class="portfolio section-pad" id="portfolio">
+  <div class="container">
+    <div class="section-tag" data-i18n="port_tag">Notre Travail</div>
+    <h2 class="section-title reveal" data-i18n="port_title">Portfolio</h2>
+    <div class="portfolio-filters reveal">
+      <button class="pf-btn active" onclick="filterPortfolio('all')" data-i18n="pf_all">Tous</button>
+      <button class="pf-btn" onclick="filterPortfolio('print')" data-i18n="pf_print">Print</button>
+      <button class="pf-btn" onclick="filterPortfolio('brand')" data-i18n="pf_brand">Branding</button>
+      <button class="pf-btn" onclick="filterPortfolio('sign')" data-i18n="pf_sign">Signalétique</button>
+      <button class="pf-btn" onclick="filterPortfolio('3d')" data-i18n="pf_3d">2D/3D</button>
+    </div>
+    <div class="portfolio-grid reveal">
+      <div class="port-item" data-cat="print" onclick="openLightbox('images/portfolio-1.jpg','Carte de Visite Premium')">
+        <div class="port-thumb" style="background: linear-gradient(135deg,#D4AF37,#0B0B0B)">
+          <div class="port-placeholder">📇<br><span>Cartes de Visite</span></div>
+        </div>
+        <div class="port-overlay"><span data-i18n="pf_view">Voir le projet</span></div>
+      </div>
+      <div class="port-item" data-cat="sign" onclick="openLightbox('images/portfolio-2.jpg','Panneau Publicitaire')">
+        <div class="port-thumb" style="background: linear-gradient(135deg,#E50914,#1a0005)">
+          <div class="port-placeholder">🏷️<br><span>Enseignes Pub</span></div>
+        </div>
+        <div class="port-overlay"><span data-i18n="pf_view">Voir le projet</span></div>
+      </div>
+      <div class="port-item" data-cat="print" onclick="openLightbox('images/portfolio-3.jpg','Menu Restaurant')">
+        <div class="port-thumb" style="background: linear-gradient(135deg,#2a2a2a,#D4AF37)">
+          <div class="port-placeholder">📋<br><span>Menus Restaurant</span></div>
+        </div>
+        <div class="port-overlay"><span data-i18n="pf_view">Voir le projet</span></div>
+      </div>
+      <div class="port-item" data-cat="sign" onclick="openLightbox('images/portfolio-4.jpg','Car Wrapping')">
+        <div class="port-thumb" style="background: linear-gradient(135deg,#0a0a0a,#E50914)">
+          <div class="port-placeholder">🚗<br><span>Car Wrapping</span></div>
+        </div>
+        <div class="port-overlay"><span data-i18n="pf_view">Voir le projet</span></div>
+      </div>
+      <div class="port-item" data-cat="3d" onclick="openLightbox('images/portfolio-5.jpg','Design 3D Forex')">
+        <div class="port-thumb" style="background: linear-gradient(135deg,#1a1a2e,#D4AF37)">
+          <div class="port-placeholder">🔷<br><span>Design 3D Forex</span></div>
+        </div>
+        <div class="port-overlay"><span data-i18n="pf_view">Voir le projet</span></div>
+      </div>
+      <div class="port-item" data-cat="brand" onclick="openLightbox('images/portfolio-6.jpg','Identité Visuelle')">
+        <div class="port-thumb" style="background: linear-gradient(135deg,#D4AF37,#E50914)">
+          <div class="port-placeholder">✨<br><span>Branding Complet</span></div>
+        </div>
+        <div class="port-overlay"><span data-i18n="pf_view">Voir le projet</span></div>
+      </div>
+      <div class="port-item" data-cat="3d" onclick="openLightbox('images/portfolio-7.jpg','Panneau Aluco')">
+        <div class="port-thumb" style="background: linear-gradient(135deg,#0f0f23,#E50914)">
+          <div class="port-placeholder">🏗️<br><span>Panneaux Aluco</span></div>
+        </div>
+        <div class="port-overlay"><span data-i18n="pf_view">Voir le projet</span></div>
+      </div>
+      <div class="port-item" data-cat="print" onclick="openLightbox('images/portfolio-8.jpg','Flyer Évènementiel')">
+        <div class="port-thumb" style="background: linear-gradient(135deg,#1a0020,#D4AF37)">
+          <div class="port-placeholder">🎉<br><span>Flyers Évènementiels</span></div>
+        </div>
+        <div class="port-overlay"><span data-i18n="pf_view">Voir le projet</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <div class="lightbox-inner" onclick="event.stopPropagation()">
+    <button class="lb-close" onclick="closeLightbox()">✕</button>
+    <img id="lbImage" src="" alt="" />
+    <p id="lbCaption"></p>
+  </div>
+</div>
+
+<!-- ========== MEDIA ========== -->
+<section class="media section-pad" id="media">
+  <div class="container">
+    <div class="section-tag" data-i18n="media_tag">Chaîne YouTube</div>
+    <h2 class="section-title reveal" data-i18n="media_title">Médias &amp; Vidéos</h2>
+    <div class="video-grid">
+      <div class="video-thumb reveal" onclick="openVideo('ncwKWiBgKvQ')">
+        <img src="https://img.youtube.com/vi/ncwKWiBgKvQ/maxresdefault.jpg" alt="NOUVURA Video" loading="lazy" onerror="this.src='https://img.youtube.com/vi/ncwKWiBgKvQ/hqdefault.jpg'" />
+        <div class="play-btn">▶</div>
+        <div class="video-label">NOUVURA Creative Showcase</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Video Modal -->
+<div class="video-modal" id="videoModal" onclick="closeVideo()">
+  <div class="video-modal-inner" onclick="event.stopPropagation()">
+    <button class="lb-close" onclick="closeVideo()">✕</button>
+    <div class="video-embed">
+      <iframe id="videoFrame" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+  </div>
+</div>
+
+<!-- ========== REQUEST SERVICE ========== -->
+<section class="request-section section-pad" id="request">
+  <div class="container">
+    <div class="section-tag" data-i18n="req_tag">Travaillons Ensemble</div>
+    <h2 class="section-title reveal" data-i18n="req_title">Demander un Service</h2>
+    <div class="request-form-wrap reveal">
+      <div class="request-form">
+        <div class="form-group">
+          <label data-i18n="form_name">Nom complet</label>
+          <input type="text" id="reqName" placeholder="Votre nom..." />
+        </div>
+        <div class="form-group">
+          <label data-i18n="form_service">Type de service</label>
+          <select id="reqService">
+            <option data-i18n="form_select">-- Sélectionner --</option>
+            <option data-i18n="srv_uiux">UI/UX Design</option>
+            <option data-i18n="srv_web">Développement Web</option>
+            <option data-i18n="srv_brand">Branding</option>
+            <option data-i18n="srv_graphic">Design Graphique</option>
+            <option data-i18n="srv_dtf">Impression DTF</option>
+            <option data-i18n="srv_cnc">Gravure CNC</option>
+            <option data-i18n="srv_laser">Gravure Laser</option>
+            <option data-i18n="p_logo">Logo Design</option>
+            <option data-i18n="p_identity">Identité de Marque</option>
+            <option data-i18n="p_landing">Landing Page UI</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label data-i18n="form_message">Votre message</label>
+          <textarea id="reqMsg" rows="5" placeholder="Décrivez votre projet..."></textarea>
+        </div>
+        <div class="form-actions">
+          <button class="btn-wa" onclick="sendWhatsApp()" data-i18n="btn_wa">📱 Envoyer via WhatsApp</button>
+          <button class="btn-email" onclick="sendEmail()" data-i18n="btn_email">✉️ Envoyer par Email</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== CONTACT ========== -->
+<section class="contact section-pad" id="contact">
+  <div class="container">
+    <div class="section-tag" data-i18n="contact_tag">Nous Joindre</div>
+    <h2 class="section-title reveal" data-i18n="contact_title">Contact</h2>
+    <div class="contact-grid reveal">
+      <a class="contact-card" href="https://wa.me/213776532042" target="_blank">
+        <div class="contact-icon">📱</div>
+        <div class="contact-info">
+          <h4>WhatsApp</h4>
+          <p>0776 532 042</p>
+        </div>
+      </a>
+      <a class="contact-card" href="mailto:yacineiguenene@gmail.com" target="_blank">
+        <div class="contact-icon">✉️</div>
+        <div class="contact-info">
+          <h4>Email</h4>
+          <p>yacineiguenene@gmail.com</p>
+        </div>
+      </a>
+      <a class="contact-card" href="https://facebook.com/nouvura adv" target="_blank">
+        <div class="contact-icon">📘</div>
+        <div class="contact-info">
+          <h4>Facebook</h4>
+          <p>nouvura adv</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer class="footer">
+  <div class="footer-glow"></div>
+  <div class="footer-inner">
+    <div class="footer-logo">NOUVURA</div>
+    <p class="footer-tagline" data-i18n="hero_tagline">"It all started with an idea."</p>
+    <p class="footer-copy">© 2026 NOUVURA. <span data-i18n="footer_rights">Tous droits réservés.</span> &nbsp;|&nbsp; <a href="#" onclick="openIPModal()" data-i18n="footer_ip">Propriété Intellectuelle</a></p>
+  </div>
+</footer>
+
+<!-- ========== IP MODAL ========== -->
+<div class="modal-overlay" id="ipModal" onclick="closeIPModal()">
+  <div class="modal-box" onclick="event.stopPropagation()">
+    <button class="lb-close" onclick="closeIPModal()">✕</button>
+    <h3>© Propriété Intellectuelle / Intellectual Property</h3>
+    <div class="modal-content">
+      <p><strong>🇫🇷 Français:</strong> Tous les contenus présents sur ce site (logos, visuels, textes, animations) sont la propriété exclusive de NOUVURA. Toute reproduction, modification ou utilisation sans autorisation écrite est strictement interdite.</p>
+      <hr>
+      <p><strong>🇬🇧 English:</strong> All content on this website (logos, visuals, texts, animations) is the exclusive property of NOUVURA. Any reproduction, modification, or use without written permission is strictly prohibited.</p>
+      <hr>
+      <p dir="rtl" lang="ar"><strong>🇸🇦 عربي:</strong> جميع المحتويات الواردة في هذا الموقع (الشعارات والمرئيات والنصوص والرسوم المتحركة) هي ملك حصري لـ NOUVURA. يُحظر تمامًا أي نسخ أو تعديل أو استخدام دون إذن خطي مسبق.</p>
+    </div>
+    <p class="modal-year">© 2026 NOUVURA — All rights reserved.</p>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
